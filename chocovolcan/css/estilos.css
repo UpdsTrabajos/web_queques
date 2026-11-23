@@ -1,0 +1,384 @@
+/*estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+body{
+    background: #FBF1CF;
+    color: #3B2114;
+    text-align: left;
+}
+
+h1, h2, h3{
+    font-family: Georgia, serif;
+    color: #3B2114;
+}
+
+/*barra con logo y menu*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #3B2114;
+    padding: 12px 6%;
+}
+
+.marca{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #FBF1CF;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.marca img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #E8A33D;
+    transition: transform 0.3s;
+}
+
+.marca:hover img{
+    transform: scale(1.1);
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    background: #54321F;
+    padding: 6px;
+    border-radius: 30px;
+}
+
+nav a{
+    display: inline-block;
+    color: #FBF1CF;
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 9px 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    background: #FBF1CF;
+    color: #3B2114;
+    transform: translateY(-2px);
+}
+
+nav a.activo{
+    background: #E8A33D;
+    color: #3B2114;
+    font-weight: bold;
+}
+
+/*portada: texto a un lado, imagen al otro*/
+.portada{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 6%;
+}
+
+.portada.invertido{
+    flex-direction: row-reverse;
+}
+
+.portada-texto{
+    flex: 1;
+}
+
+.etiqueta{
+    color: #A85A12;
+    font-size: 0.85em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.portada h1{
+    font-size: 3.2em;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.portada p.descripcion{
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.portada img{
+    width: 380px;
+    height: 380px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #E8A33D;
+    box-shadow: 0 10px 25px rgba(59, 33, 20, 0.3);
+}
+
+.boton{
+    display: inline-block;
+    background: #3B2114;
+    color: #FBF1CF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 13px 28px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.boton:hover{
+    background: #E8A33D;
+    color: #3B2114;
+    transform: scale(1.05);
+}
+
+/*titulo de cada seccion*/
+.seccion-titulo{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 6% 0;
+}
+
+.seccion-titulo h2{
+    font-size: 2em;
+    border-left: 8px solid #E8A33D;
+    padding-left: 15px;
+}
+
+/*productos: imagen a un lado, texto al otro*/
+.productos{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 6% 50px;
+}
+
+.producto{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background: #FFFAEA;
+    padding: 22px 30px;
+    border-radius: 120px 20px 20px 120px;
+    box-shadow: 0 5px 15px rgba(59, 33, 20, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto.invertido{
+    flex-direction: row-reverse;
+    border-radius: 20px 120px 120px 20px;
+}
+
+.producto:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(59, 33, 20, 0.3);
+}
+
+.producto img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #E8A33D;
+}
+
+.producto-texto{
+    flex: 1;
+}
+
+.producto h3{
+    font-size: 1.6em;
+    margin-bottom: 8px;
+}
+
+.producto p{
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.producto .precio{
+    color: #A85A12;
+    font-family: Georgia, serif;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.producto button{
+    background: transparent;
+    color: #3B2114;
+    font-weight: bold;
+    border: 2px solid #3B2114;
+    padding: 9px 18px;
+    border-radius: 8px;
+    margin-right: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.producto button.pedir{
+    background: #3B2114;
+    color: #FBF1CF;
+}
+
+.producto button:hover{
+    background: #E8A33D;
+    color: #3B2114;
+    border-color: #E8A33D;
+}
+
+/*como pedir*/
+.pasos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 6% 50px;
+}
+
+.paso{
+    flex: 1;
+    min-width: 240px;
+    background: #3B2114;
+    padding: 28px;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.paso:hover{
+    transform: translateY(-8px);
+}
+
+.numero{
+    display: inline-block;
+    color: #E8A33D;
+    font-family: Georgia, serif;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.paso h3{
+    color: #FBF1CF;
+    margin: 8px 0 10px;
+}
+
+.paso p{
+    color: #FBF1CF;
+    line-height: 1.5;
+}
+
+/*contacto*/
+.contacto{
+    background: #E8A33D;
+    padding: 40px 6%;
+}
+
+.contacto h2{
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    font-size: 2em;
+}
+
+.datos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dato{
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #FFFAEA;
+    padding: 16px 20px;
+    border-radius: 12px;
+}
+
+.icono{
+    font-size: 2em;
+}
+
+/*pie de pagina*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: #3B2114;
+    color: #FBF1CF;
+    font-size: 0.9em;
+    padding: 22px 6%;
+}
+
+/*responsivo*/
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+
+    nav ul{
+        justify-content: center;
+        border-radius: 15px;
+    }
+
+    nav a{
+        padding: 8px 12px;
+    }
+
+    .portada, .portada.invertido{
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 35px 20px;
+    }
+
+    .portada h1{
+        font-size: 2.2em;
+    }
+
+    .portada img{
+        width: 260px;
+        height: 260px;
+    }
+
+    .producto, .producto.invertido{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 22px 16px;
+        border-radius: 20px;
+    }
+
+    .producto button{
+        margin-bottom: 6px;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}

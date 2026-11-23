@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoVolcán | Inicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <a class="marca" href="index.html">
+            <img src="imagenes/logo.png" alt="Logo de ChocoVolcán">
+            <span>ChocoVolcán</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a class="activo" href="index.html">Inicio</a></li>
+                <li><a href="queques.html">Queques</a></li>
+                <li><a href="como_pedir.html">Cómo pedir</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="portada">
+            <div class="portada-texto">
+                <p class="etiqueta">Queques de Sucre</p>
+                <h1>Un volcán de chocolate en cada bocado</h1>
+                <p class="descripcion">Preparamos queques suaves y llenos de sabor.
+                    Nuestro favorito tiene un centro de chocolate que se derrite al partirlo.
+                </p>
+                <a class="boton" href="queques.html">Ver los queques</a>
+            </div>
+            <img src="imagenes/image.png" alt="Queque volcán de chocolate">
+        </section>
+
+        <section class="seccion-titulo">
+            <h2>Los más pedidos</h2>
+        </section>
+        <section class="productos">
+            <div class="producto">
+                <img src="imagenes/image.png" alt="Queque volcán de chocolate">
+                <div class="producto-texto">
+                    <h3>Volcán de Chocolate 🌋</h3>
+                    <p>Queque tibio con centro de chocolate derretido.</p>
+                    <p class="precio">Bs. 15</p>
+                    <button onclick="verDetalle('volcan')">Ver detalle</button>
+                    <button class="pedir" onclick="pedir('Volcán de Chocolate')">Pedir</button>
+                </div>
+            </div>
+            <div class="producto invertido">
+                <img src="imagenes/image.png" alt="Queque de chocolate">
+                <div class="producto-texto">
+                    <h3>Queque de Chocolate 🍫</h3>
+                    <p>Suave, húmedo y con cobertura de chocolate.</p>
+                    <p class="precio">Bs. 40</p>
+                    <button onclick="verDetalle('chocolate')">Ver detalle</button>
+                    <button class="pedir" onclick="pedir('Queque de Chocolate')">Pedir</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="imagenes/image.png" alt="Queque marmoleado">
+                <div class="producto-texto">
+                    <h3>Queque Marmoleado 🤎</h3>
+                    <p>La mezcla perfecta de vainilla y chocolate.</p>
+                    <p class="precio">Bs. 35</p>
+                    <button onclick="verDetalle('marmoleado')">Ver detalle</button>
+                    <button class="pedir" onclick="pedir('Queque Marmoleado')">Pedir</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2026 ChocoVolcán 🍫</p>
+        <p>Sucre - Bolivia · 74507983</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
